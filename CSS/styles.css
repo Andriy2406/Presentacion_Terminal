@@ -1,0 +1,229 @@
+/* Tema empresarial: azul marino, gris pizarra y acento dorado */
+:root {
+    --acento: #d4a537;
+    --claro: #e8edf3;
+    --tarjeta: rgba(255, 255, 255, .08)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b1623;
+    overflow: hidden;
+    height: 100vh
+}
+
+.s {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vh 8vw;
+    color: var(--claro);
+    animation: in .5s
+}
+
+.s.on {
+    display: flex
+}
+
+@keyframes in {
+    from {
+        opacity: 0;
+        transform: translateX(40px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.b1 {
+    background: linear-gradient(135deg, #0b1f3a, #1d3f6e)
+}
+
+.b2 {
+    background: linear-gradient(135deg, #12263f, #24476f)
+}
+
+.b3 {
+    background: linear-gradient(135deg, #102a43, #1f5f75)
+}
+
+.b4 {
+    background: linear-gradient(135deg, #1b2a41, #324a5f)
+}
+
+.b5 {
+    background: linear-gradient(135deg, #0f2233, #2a3f5f)
+}
+
+.b6 {
+    background: linear-gradient(135deg, #2b2d42, #4a4e69)
+}
+
+.b7 {
+    background: linear-gradient(135deg, #0b1f3a, #1f5f75)
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    color: #fff
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    margin-bottom: 3vh;
+    color: #fff;
+    padding-bottom: 1.2vh;
+    border-bottom: 3px solid var(--acento);
+    display: inline-block;
+    align-self: flex-start
+}
+
+p,
+li {
+    font-size: clamp(1.1rem, 2.4vw, 1.7rem);
+    line-height: 1.5
+}
+
+ul {
+    list-style: none
+}
+
+li {
+    margin: 1.2vh 0
+}
+
+li::before {
+    content: "▪ ";
+    color: var(--acento);
+    font-weight: bold
+}
+
+b {
+    color: #fff
+}
+
+.sub {
+    margin-top: 2vh;
+    opacity: .85
+}
+
+.tag {
+    display: inline-block;
+    background: var(--acento);
+    color: #1a1a1a;
+    padding: .4em 1em;
+    border-radius: .4em;
+    font-weight: bold;
+    margin-top: 3vh;
+    font-size: 1.1rem;
+    align-self: flex-start
+}
+
+.big {
+    font-size: clamp(4rem, 12vw, 8rem);
+    text-align: center
+}
+
+code,
+.term {
+    font-family: Consolas, monospace
+}
+
+.key {
+    background: #f4f6f9;
+    color: #0b1f3a;
+    padding: .1em .5em;
+    border-radius: .3em;
+    font-weight: bold;
+    box-shadow: 0 3px 0 #0006
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5vh 1.5vw
+}
+
+.card {
+    background: var(--tarjeta);
+    border: 1px solid #ffffff22;
+    border-top: 3px solid var(--acento);
+    border-radius: 8px;
+    padding: 1.4vh 1.2vw;
+    font-size: clamp(.95rem, 1.8vw, 1.3rem)
+}
+
+.card code {
+    display: block;
+    color: var(--acento);
+    font-size: 1.15em;
+    font-weight: bold
+}
+
+.term {
+    background: #0a0f16;
+    border: 1px solid #ffffff22;
+    border-radius: 8px;
+    padding: 2.5vh 2vw;
+    font-size: clamp(1rem, 2.2vw, 1.6rem);
+    line-height: 1.7;
+    box-shadow: 0 8px 30px #0008
+}
+
+.term .g {
+    color: #6fcf97
+}
+
+.term .c {
+    color: #7fc8f8
+}
+
+.term .o {
+    color: #aab4c0
+}
+
+.bar {
+    position: fixed;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ffffffbb;
+    font-size: .9rem;
+    z-index: 9
+}
+
+.bar button {
+    background: #ffffff1f;
+    border: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: .3em .9em;
+    border-radius: .4em;
+    cursor: pointer;
+    margin: 0 .5em
+}
+
+.bar button:hover {
+    background: #ffffff40
+}
+
+.prog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: var(--acento);
+    transition: .4s;
+    z-index: 9
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Terminal integrada en IntelliJ IDEA</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body>
+    <div class="prog" id="p"></div>
+
+    <section class="s b1 on">
+        <p>IntelliJ IDEA</p>
+        <h1>Terminal integrada</h1>
+        <p class="sub">Terminal dentro de IntelliJ y comandos básicos</p>
+        <span class="tag">Aprendiz: Jhostin Andriy Guzman Rojas</span>
+    </section>
+
+    <section class="s b2">
+        <h2>¿Qué es la terminal integrada?</h2>
+        <ul>
+            <li>Una <b>consola de comandos</b> dentro del mismo IntelliJ IDEA.</li>
+            <li>No hay que abrir otra ventana (CMD, PowerShell, etc.).</li>
+            <li>Se abre <b>ya ubicada en la carpeta de tu proyecto</b>.</li>
+            <li>Sirve para compilar, ejecutar, usar Git y Maven sin salir del IDE.</li>
+        </ul>
+    </section>
+
+    <section class="s b3">
+        <h2>¿Cómo la abro?</h2>
+        <ul>
+            <li>Atajo: <span class="key">Alt</span> + <span class="key">F12</span></li>
+            <li>Menú: <b>View → Tool Windows → Terminal</b></li>
+            <li>Botón <b>Terminal</b> en la barra inferior izquierda</li>
+            <li>Botón <b>＋</b> = abrir más pestañas de terminal</li>
+            <li>Puedes elegir el shell: PowerShell, CMD, Git Bash…</li>
+        </ul>
+    </section>
+
+    <section class="s b4">
+        <h2>Comandos básicos</h2>
+        <div class="grid">
+            <div class="card"><code>pwd / cd</code>Ver dónde estoy / cambiar de carpeta</div>
+            <div class="card"><code>dir (ls)</code>Listar archivos</div>
+            <div class="card"><code>mkdir carpeta</code>Crear una carpeta</div>
+            <div class="card"><code>cls (clear)</code>Limpiar la pantalla</div>
+            <div class="card"><code>java -version</code>Ver la versión de Java</div>
+            <div class="card"><code>javac / java</code>Compilar y ejecutar</div>
+            <div class="card"><code>git status</code>Ver cambios en Git</div>
+            <div class="card"><code>mvn -v</code>Revisar Maven</div>
+        </div>
+    </section>
+
+    <section class="s b5">
+        <h2>Ejemplo práctico</h2>
+        <div class="term">
+            <span class="g">PS C:\Proyecto\src&gt;</span> <span class="c">javac HolaMundo.java</span><br>
+            <span class="o">(compila, sin errores)</span><br>
+            <span class="g">PS C:\Proyecto\src&gt;</span> <span class="c">java HolaMundo</span><br>
+            <span class="o">¡Hola Mundo!</span>
+        </div>
+        <p class="sub">Compilamos con <b>javac</b> y ejecutamos con <b>java</b>. ¡Todo dentro de IntelliJ!</p>
+    </section>
+
+    <section class="s b6">
+        <h2>Errores comunes y solución</h2>
+        <ul>
+            <li><b>"javac no se reconoce"</b> → falta configurar el JDK en el PATH / JAVA_HOME.</li>
+            <li><b>"No se encontró la clase"</b> → estás en la carpeta equivocada; usa <code>cd</code>.</li>
+            <li><b>Comando no funciona</b> → mal shell (CMD vs PowerShell); cambia en Settings → Tools → Terminal.</li>
+        </ul>
+    </section>
+
+    <section class="s b7">
+        <div class="big"></div>
+        <h2 style="text-align:center">¡Resumen!</h2>
+        <ul>
+            <li>La terminal integrada = consola dentro del IDE</li>
+            <li>Se abre con <span class="key">Alt</span>+<span class="key">F12</span></li>
+            <li>Comandos clave: cd, dir, javac, java, git</li>
+        </ul>
+    </section>
+
+    <div class="bar"><button onclick="go(-1)">◀</button><span id="n"></span><button onclick="go(1)">▶</button></div>
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>
