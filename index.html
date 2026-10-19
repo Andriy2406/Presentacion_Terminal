@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Terminal integrada en IntelliJ IDEA</title>
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
@@ -73,6 +73,42 @@
         </ul>
     </section>
 
+    <section class="s b3">
+        <h2>Ejercicio en clase: Saludo desde la terminal</h2>
+        <ul>
+            <li>Abre la terminal (<span class="key">Alt</span> + <span class="key">F12</span>) y escribe <code>pwd</code>.</li>
+            <li>Crea una carpeta: <code>mkdir ejercicio</code> y entra: <code>cd ejercicio</code>.</li>
+            <li>En IntelliJ crea el archivo <b>Saludo.java</b> dentro de esa carpeta.</li>
+            <li>Compila con <code>javac</code> y ejecuta con <code>java</code>.</li>
+            <li><b>Reto:</b> ejecuta <code>java Saludo TuNombre</code>.</li>
+            <li><b>Reto extra:</b> quita un <code>;</code>, compila y lee el error.</li>
+        </ul>
+    </section>
+
+    <section class="s b5">
+        <h2>Solución: el código</h2>
+        <div class="term" style="white-space:pre"><span class="c">public class Saludo {
+    public static void main(String[] args) {
+        String nombre = args.length &gt; 0 ? args[0] : "Aprendiz";
+        System.out.println("Hola " + nombre + ", bienvenido al SENA");
+    }
+}</span></div>
+        <p class="sub"><b>args</b> guarda lo que escribimos después del nombre al ejecutar.</p>
+    </section>
+
+    <section class="s b4">
+        <h2>Solución: los comandos</h2>
+        <div class="term" style="white-space:pre"><span class="g">PS C:\Proyecto&gt;</span> <span class="c">mkdir ejercicio</span>
+<span class="g">PS C:\Proyecto&gt;</span> <span class="c">cd ejercicio</span>
+<span class="g">PS C:\Proyecto\ejercicio&gt;</span> <span class="c">javac Saludo.java</span>
+<span class="g">PS C:\Proyecto\ejercicio&gt;</span> <span class="c">dir</span>
+<span class="o">Saludo.class   Saludo.java</span>
+<span class="g">PS C:\Proyecto\ejercicio&gt;</span> <span class="c">java Saludo</span>
+<span class="o">Hola Aprendiz, bienvenido al SENA</span>
+<span class="g">PS C:\Proyecto\ejercicio&gt;</span> <span class="c">java Saludo Maria</span>
+<span class="o">Hola Maria, bienvenido al SENA</span></div>
+    </section>
+
     <section class="s b7">
         <div class="big"></div>
         <h2 style="text-align:center">¡Resumen!</h2>
@@ -84,7 +120,6 @@
     </section>
 
     <div class="bar"><button onclick="go(-1)">◀</button><span id="n"></span><button onclick="go(1)">▶</button></div>
-    
     <script src="./JS/script.js"></script>
 </body>
 
