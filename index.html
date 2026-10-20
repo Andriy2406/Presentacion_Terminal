@@ -80,7 +80,7 @@
             <li>Crea una carpeta: <code>mkdir ejercicio</code> y entra: <code>cd ejercicio</code>.</li>
             <li>En IntelliJ crea el archivo <b>Saludo.java</b> dentro de esa carpeta.</li>
             <li>Compila con <code>javac</code> y ejecuta con <code>java</code>.</li>
-            <li><b>Reto:</b> ejecuta <code>java Saludo TuNombre</code>.</li>
+            <li><b>Reto:</b> cambia el mensaje por tu nombre, guarda, compila y ejecuta otra vez.</li>
             <li><b>Reto extra:</b> quita un <code>;</code>, compila y lee el error.</li>
         </ul>
     </section>
@@ -89,11 +89,10 @@
         <h2>Solución: el código</h2>
         <div class="term" style="white-space:pre"><span class="c">public class Saludo {
     public static void main(String[] args) {
-        String nombre = args.length &gt; 0 ? args[0] : "Aprendiz";
-        System.out.println("Hola " + nombre + ", bienvenido al SENA");
+        System.out.println("Hola, soy Andriy y estoy en el SENA");
     }
 }</span></div>
-        <p class="sub"><b>args</b> guarda lo que escribimos después del nombre al ejecutar.</p>
+        <p class="sub"><b>main</b> es donde empieza el programa y <b>println</b> muestra el texto en pantalla.</p>
     </section>
 
     <section class="s b4">
@@ -104,9 +103,7 @@
 <span class="g">PS C:\Proyecto\ejercicio&gt;</span> <span class="c">dir</span>
 <span class="o">Saludo.class   Saludo.java</span>
 <span class="g">PS C:\Proyecto\ejercicio&gt;</span> <span class="c">java Saludo</span>
-<span class="o">Hola Aprendiz, bienvenido al SENA</span>
-<span class="g">PS C:\Proyecto\ejercicio&gt;</span> <span class="c">java Saludo Maria</span>
-<span class="o">Hola Maria, bienvenido al SENA</span></div>
+<span class="o">Hola, soy Andriy y estoy en el SENA</span></div>
     </section>
 
     <section class="s b7">
